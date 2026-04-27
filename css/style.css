@@ -391,7 +391,8 @@ body {
     padding: 1.5rem;
 }
 
-.project-content h3 {
+.project-content h3,
+.project-content h4 {
     color: var(--accent-color);
     margin-bottom: 1rem;
     font-size: 1.2rem;
@@ -429,6 +430,105 @@ body {
 .project-link:hover {
     color: var(--accent-color);
     transform: translateX(5px);
+}
+
+/* 数据分析与教学方案 */
+.data-analysis {
+    padding: 8rem 0;
+    background-color: rgba(17, 25, 40, 0.5);
+}
+
+.projects-section,
+.teaching-section {
+    margin-bottom: 4rem;
+}
+
+.subsection-title {
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    border-left: 3px solid var(--secondary-color);
+    padding-left: 1rem;
+}
+
+/* 教学方案板块样式 */
+.phase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0 3rem;
+}
+
+.phase-card {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.phase-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--secondary-color), transparent);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.phase-card:hover::before {
+    transform: scaleX(1);
+}
+
+.phase-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px var(--shadow-color);
+}
+
+.phase-card h4 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.phase-desc {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.knowledge-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.knowledge-list li {
+    font-size: 0.85rem;
+    padding: 0.5rem 0;
+    color: var(--text-color);
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.contact-cta {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: rgba(17, 25, 40, 0.8);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.contact-cta p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: var(--accent-color);
 }
 
 /* 联系方式 */
